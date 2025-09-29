@@ -1,0 +1,301 @@
+/* ============================================== */
+/* VARIÁVEIS DE COR E RESET BÁSICO */
+/* ============================================== */
+:root {
+  --bg-dark: #000000;
+  --card-dark: #1a1a1a;
+  --text-light: #f0f0f0;
+  --accent-orange: #ff8c00;
+  --accent-silver: #f8f7f7;
+  --divider-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ============================================== */
+/* LAYOUT E CENTRALIZAÇÃO */
+/* ============================================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+background-image: url(https://i.pinimg.com/originals/6d/c1/17/6dc11726798611a9e2fa758a02188bf9.gif);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  padding: 60px 20px 40px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center; /* Garante que todos os elementos internos estejam centralizados */
+}
+
+/* ESTILO E TAMANHO DA LOGO */
+.logo {
+position: relative;
+ left: 280px;
+  width: 190px; /* Logo maior e centralizada */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* === ESTILO H1: O DEGRADÊ AZUL-LARANJA === */
+h1 {
+     position: relative;
+    right: 50px;
+  font-size: 2.5rem;
+  margin: 0;
+
+  background-image: linear-gradient(
+    to right,
+    #0085ca,
+    /* Azul vibrante */ #fd8112 /* Laranja energético */
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+
+  display: inline-block;
+}
+/* ======================================== */
+
+/* SUBTÍTULO COM MAIS DESTAQUE */
+.subtitle {
+  color: var(--accent-orange);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+}
+
+/* --- Contêiner Principal --- */
+.container {
+  margin: 0 auto;
+  padding: 30px 20px 80px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* TÍTULO DE SEÇÃO MAIS PROFISSIONAL */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-light); /* Texto branco para máximo contraste */
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-orange); /* Linha divisória laranja */
+  width: 100%;
+}
+
+.grid-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* ============================================== */
+/* ANIMAÇÃO DA BORDA (CHAVE) */
+/* ============================================== */
+@keyframes animate-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================== */
+/* ESTILO DO CARD (PREVIEW DA LP) */
+/* ============================================== */
+
+/* Container que envolve a LP e o Carrossel (Se existir) */
+.landing-page-card {
+    width: 100%;
+    /* margin-bottom: 40px; <-- REMOVIDO */
+    max-width: 900px; 
+}
+
+/* Link/Card da Landing Page */
+.preview {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-light);
+  background: var(--card-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* BORDA MAIS GROSSA E ANIMADA */
+  border: 5px solid transparent; /* Aumentado para 5px */
+
+  background-image: linear-gradient(var(--card-dark), var(--card-dark)),
+    /* Degradê Laranja e Azul */
+      linear-gradient(
+        45deg,
+        var(--accent-orange) 0%,
+        #0085ca 50%,
+        var(--accent-orange) 100%
+      );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+  width: 100%;
+
+  background-size: 200% 200%;
+  animation: animate-border 4s ease-in-out infinite; /* Animação mais rápida (4s) */
+
+  /* NOVO: Transição para o efeito de flutuação */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* EFEITO FLUTUANTE PROFISSIONAL NO HOVER */
+.preview:hover {
+  transform: translateY(-8px); /* Flutua um pouco para cima */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra intensa */
+  z-index: 10;
+}
+
+/* Iframe (Miniatura da LP) - Altura fixa */
+.preview iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+  transition: none;
+  transform-origin: top;
+}
+
+.preview:hover iframe {
+  height: 600px;
+}
+
+.preview-info {
+  padding: 20px;
+  text-align: left;
+}
+.preview-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  color: var(--accent-orange);
+}
+.preview-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--accent-silver);
+}
+
+/* ============================================== */
+/* ESTILO DO CARROSSEL DE IMAGENS */
+/* ============================================== */
+
+.template-carousel-wrapper {
+  padding: 20px 0;
+  margin-top: 30px;
+  background: #111;
+  border-radius: 12px;
+}
+
+.template-carousel-wrapper h3 {
+  text-align: left;
+  color: var(--accent-silver);
+  font-size: 1.1rem;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.template-carousel {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.template-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.template-carousel::-webkit-scrollbar-thumb {
+  background: var(--accent-orange);
+  border-radius: 10px;
+}
+.template-carousel::-webkit-scrollbar-track {
+  background: var(--card-dark);
+}
+
+.carousel-item {
+  flex: 0 0 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: none;
+  cursor: default;
+  box-shadow:  0px 0px 9px rgba(252, 145, 5, 0.4);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; 
+    /* MUDANÇA AQUI: de 'cover' para 'contain' */
+    object-fit: contain; 
+    /* NOVO: Define um fundo para o espaço vazio */
+    background-color: #333; 
+    border: none;
+    display: block;
+}
+/* ... (código p
+
+
+/* ============================================== */
+/* RESPONSIVIDADE (MOBILE) */
+/* ============================================== */
+@media (max-width: 768px) {
+ .logo{
+     position: relative;
+    left: 0px;
+ }
+
+  header {
+    padding-top: 40px;
+  }
+  h1 {
+    position: relative;
+    right: 0px;
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .preview iframe {
+    height: 800px;
+  }
+
+  .carousel-item {
+    flex: 0 0 66%;
+  }
+}
