@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Playwrite+AU+QLD:wght@100..400&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inform.css">
+    <title>Agendamento</title>
+</head>
+<body>
+
+<section class="card">
+</div>
+
+
+<div>
+<label for="raca">Raça:</label>
+<input type="text" id="raca" name="raca" placeholder="Ex.: SRD / Labrador" required />
+<div class="error" id="err-raca"></div>
+</div>
+
+
+<div>
+<label for="idade">Idade:</label>
+<input type="number" id="idade" name="idade" min="0" step="0.1" placeholder="Ex.: 3.5" required />
+<div class="error" id="err-idade"></div>
+</div>
+
+
+<div>
+<label>Sexo:</label>
+<div class="radio-group">
+<label><input type="radio" name="sexo" value="Macho"> Macho</label>
+<label><input type="radio" name="sexo" value="Fêmea"> Fêmea</label>
+</div>
+<div class="error" id="err-sexo"></div>
+</div>
+
+
+<div>
+<label for="castrado">Castrado(a)</label>
+<div class="checkbox-group">
+<label><input type="checkbox" id="castrado" name="castrado"> Sim</label>
+<label><input type="checkbox" id="castrado" name="castrado"> Não</label>
+</div>
+</div>
+
+
+<div class="full">
+<label for="cor">Cor / Pelagem</label>
+<input type="text" id="cor" name="cor" placeholder="Ex.: Marrom e branco / Curta" />
+</div>
+
+
+<div class="full">
+<label for="observacoes">Observações (sintomas, histórico breve)</label>
+<textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva o motivo da consulta, sintomas e histórico..."></textarea>
+</div>
+
+
+<div class="full">
+<div id="output"></div>
+</div>
+
+
+</form>
+</section>
+</div>
+
+
+<div class="line">🐾</div>
+<nav>
+<div class="pet">
+
+<h1>🐾Informações do Pet🐾</h1>
+
+
+</div>
+
+
+
+</nav>
+
+
+  <section>
+<div class="box-box">
+  <div class="box"></div>
+
+</div>
+  </section>
+  <section>
+<div class="img">
+ <img class="logo" src="../img/petecare.png" alt="" > 
+ </div>
+</div>
+<input type="submit" onclick="Clicar()">Proxima Etapa</input>
+
+
+
+<script src="./inform.js"></script>
+</section>
+</body>
+</html>

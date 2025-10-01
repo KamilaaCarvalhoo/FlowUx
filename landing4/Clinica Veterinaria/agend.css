@@ -1,0 +1,184 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+  background-color: black;
+  overflow-x: hidden;
+  font-family: "Rowdies", sans-serif;
+}
+
+.box-box{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.box{
+position: relative;
+top: -50px;
+left: 5%;   
+width: 700px;
+height: 670px;
+background-color: rgb(204, 245, 226);
+border-radius: 30px;
+box-shadow: 0px 0px 8px 2px rgb(8, 155, 123);;
+}
+
+.img{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.logo{
+ position: relative;
+ top: -730px;
+ left: 5%;   
+ width: 200px;   
+z-index: 1;
+
+}
+
+h1{
+color: #0c0c0c;
+position: relative;
+top: 305px;
+left: 38%;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+
+}
+
+h2{
+color: #0c0c0c;
+position: relative;
+top: 330px;
+left: 32%;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+
+}
+
+label[for=Name]{
+position: relative;
+top: 370px;
+left: 450px;
+color: #030303;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+
+}
+
+
+
+input[type=text]{
+ 
+position: relative;
+top: 370px;
+left: 450px;
+width: 20%;
+height: 30px;
+border-radius: 20px;
+color: #030303;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+border: none;
+box-shadow: 0px 0px 8px 2px rgb(8, 155, 123);
+}
+
+label[for=number]{
+position: relative;
+top: 440px;
+left: 30px;
+width: 20%;
+height: 30px;
+color: #000000;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+
+
+}
+
+input[type=number]{
+position: relative;
+top: 440px;
+left: 30px;
+width: 20%;
+height: 30px;
+border-radius: 20px;
+color: #030303;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+border: none;
+box-shadow: 0px 0px 8px 2px rgb(8, 155, 123);
+}
+
+label[for=Email]{
+position: relative;
+top: 510px;
+right: 424px;
+width: 20%;
+height: 30px;
+color: #000000;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+
+
+}
+
+input[type=email]{
+position: relative;
+top: 510px;
+right: 425px;
+width: 20%;
+height: 30px;
+border-radius: 20px;
+color: #030303;
+z-index: 1;
+font-family: "Rowdies", sans-serif;
+border: none;
+box-shadow: 0px 0px 8px 2px rgb(8, 155, 123);
+}
+
+input:focus{
+outline: none;
+
+}
+
+.line{
+position: relative;
+top: 520px;
+left: 760px;
+z-index: 1;
+
+
+}
+
+button{
+position: relative;
+top: 630px;
+left: 46%;
+z-index: 1;
+height: 40px;
+border-radius:20px ;
+border: none;
+cursor: pointer;
+background-color: #10f0d2;
+box-shadow: 0px 0px 12px 3px rgb(8, 155, 143);
+width: 15%;
+color: #fff;
+ font-family: "Rowdies", sans-serif;
+}
+
+
+
+button:focus{
+outline: none;
+
+}
