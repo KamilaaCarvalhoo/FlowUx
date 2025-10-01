@@ -1,87 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+   
   <head>
+       
     <meta charset="UTF-8" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+       
     <title>Floricultura</title>
+     
   </head>
+   
   <body>
-   <header>
-    <h1>Floricultura</h1>
-    <nav>
-      <a href="#hero">Início</a>
-      <a href="#buques">Buquês</a>
-      <a href="#cestas">Cestas</a>
-      <a href="#plantas">Plantas</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+       
+    <header>
+         
+      <h1>Floricultura</h1>
+         
+      <nav>
+              <a href="#hero">Início</a>       <a href="#buques">Buquês</a>    
+          <a href="#cestas">Cestas</a>       <a href="#plantas">Plantas</a>    
+          <a href="#contato">Contato</a>    
+      </nav>
+       
+    </header>
 
- 
-  <section class="hero" id="hero">
-    <div>
-      <h2>Flores que encantam, cores que transformam</h2>
-      <p>Arranjos exclusivos para todas as ocasiões</p>
-      <a href="#buques" class="btn">Ver Produtos</a>
-    </div>
-  </section>
-
-  
-  <section id="buques">
-    <h3>Buquês</h3>
-    <div class="grid">
-     
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Buquê Exemplo">
-        <h4>Buquê Exemplo</h4>
-        <p>Descrição do buquê aqui.</p>
+       
+    <section class="hero" id="hero">
+         
+      <div>
+             
+        <h2>Flores que encantam, cores que transformam</h2>
+             
+        <p>Arranjos exclusivos para todas as ocasiões</p>
+              <a href="#buques" class="btn">Ver Produtos</a>    
       </div>
-    </div>
-  </section>
+       
+    </section>
 
- 
-  <section id="cestas">
-    <h3>Cestas</h3>
-    <div class="grid">
-     
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Cesta Exemplo">
-        <h4>Cesta Exemplo</h4>
-        <p>Descrição da cesta aqui.</p>
+       
+    <section id="buques">
+         
+      <h3>Buquês</h3>
+         
+      <div class="carousel">
+                   
+        <div class="card">
+                 
+          <img
+            src="./img-flores/buque_rosa.png"
+            alt="Buquê Romântico"
+          />
+                 
+          <h4>Buquê Rosas Vermelhas</h4>
+                 
+          <p>O clássico para expressar amor e paixão.</p>
+               
+        </div>
+
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/lirios.png"
+            alt="Buquê de Lírios"
+          />
+                 
+          <h4>Buquê de Lírios</h4>
+                 
+          <p>Elegância e sofisticação em tons claros.</p>
+               
+        </div>
+
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/lavanda.png"
+            alt="Buquê Exótico"
+          />
+                 
+          <h4>Buquê de Lavanda</h4>
+                 
+          <p>Flores exóticas e de longa duração.</p>
+               
+        </div>
+           
       </div>
-    </div>
-  </section>
+       
+    </section>
 
- 
-  <section id="plantas">
-    <h3>Plantas</h3>
-    <div class="grid">
-     
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Planta Exemplo">
-        <h4>Planta Exemplo</h4>
-        <p>Descrição da planta aqui.</p>
+       
+    <section id="cestas">
+         
+      <h3>Cestas</h3>
+         
+      <div class="carousel">
+                   
+        <div class="card">
+                 
+          <img
+            src="./img-flores/café_da_manha.png"
+            alt="Cesta Café da Manhã"
+          />
+                 
+          <h4>Cesta Café da Manhã</h4>
+                 
+          <p>Pães, frutas e geleias para um despertar especial.</p>
+               
+        </div>
+
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/vinho.png"
+            alt="Cesta Vinhos e Queijos"
+          />
+                 
+          <h4>Cesta Vinhos e Queijos</h4>
+                 
+          <p>Seleção premium para momentos a dois.</p>
+               
+        </div>
+
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/cestachocolate.png"
+            alt="Cesta Chocolates"
+          />
+                 
+          <h4>Cesta de Chocolates</h4>
+                 
+          <p>Os melhores chocolates importados e artesanais.</p>
+               
+        </div>
+           
       </div>
-    </div>
-  </section>
+       
+    </section>
 
-  <section class="contato" id="contato">
-    <h3>Entre em Contato</h3>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea rows="4" placeholder="Sua mensagem"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <a href="https://wa.me/5599999999999?text=Olá%20quero%20fazer%20um%20pedido%20de%20flores!" target="_blank" class="btn-whatsapp">
-      💬 Fale Conosco no WhatsApp
-    </a>
-  </section>
+       
+    <section id="plantas">
+         
+      <h3>Plantas</h3>
+         
+      <div class="carousel">
+                   
+        <div class="card">
+                 
+          <img
+            src="./img-flores/orquidia.png"
+            alt="Orquídea Phalaenopsis"
+          />
+                 
+          <h4>Orquídea Phalaenopsis</h4>
+                 
+          <p>Beleza duradoura para decorar o ambiente.</p>
+               
+        </div>
 
-  <footer>
-    <p>© 2025 Floricultura - Todos os direitos reservados</p>
-  </footer>
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/kit_de_suculentas-removebg-preview.png"
+            alt="Suculentas"
+          />
+                 
+          <h4>Kit de Suculentas</h4>
+                 
+          <p>Fácil de cuidar e perfeito para pequenos espaços.</p>
+               
+        </div>
+
+             
+        <div class="card">
+                 
+          <img
+            src="./img-flores/Antúrio_Vermelho.png"
+            alt="Planta Exemplo"
+          />
+                 
+          <h4>Antúrio Vermelho</h4>
+                 
+          <p>Cor vibrante para dar vida à sua casa.</p>
+               
+        </div>
+           
+      </div>
+       
+    </section>
+
+     
+    <section class="contato" id="contato">
+         
+      <h3>Entre em Contato</h3>
+         
+      <form>
+              <input type="text" placeholder="Seu nome" required />      
+        <input type="email" placeholder="Seu e-mail" required />      
+        <textarea rows="4" placeholder="Sua mensagem"></textarea>      
+        <button type="submit">Enviar</button>    
+      </form>
+         
+      <a
+        href="https://wa.me/5599999999999?text=Olá%20quero%20fazer%20um%20pedido%20de%20flores!"
+        target="_blank"
+        class="btn-whatsapp"
+      >
+              💬 Fale Conosco no WhatsApp    
+      </a>
+       
+    </section>
+
+     
+    <footer>
+         
+      <p>© 2025 Floricultura - Todos os direitos reservados</p>
+       
+    </footer>
+     
   </body>
 </html>
