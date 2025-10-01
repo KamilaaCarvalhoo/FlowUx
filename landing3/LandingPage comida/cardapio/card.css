@@ -1,0 +1,233 @@
+/* === SEÇÃO CARDÁPIO COMPLETO (INTEGRAÇÃO) === */
+
+.main-header {
+    background-color: #F3EF05; /* Fundo Amarelo para a barra */
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-image {
+    width: 120px; 
+}
+
+/* Navegação */
+.main-nav a {
+    color: #000;
+    margin: 0 15px;
+    font-size: 0.9em;
+    padding: 5px;
+    font-family: 'Bungee', sans-serif;
+}
+
+.main-nav a:hover {
+    color: #F31505; /* Hover Vermelho Fogo */
+}
+
+/* Busca */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="search"] {
+    width: 180px;
+    padding: 8px 30px 8px 10px;
+    border: 2px solid #F31505; /* Borda Vermelha */
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(243, 21, 5, 0.3);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    color: #F31505;
+    pointer-events: none;
+}
+
+/* --- SEÇÃO DE DESTAQUE ABAIXO DO HEADER --- */
+
+.menu-highlight-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsividade do Header */
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav {
+        order: 3; 
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        margin: 0 10px;
+    }
+
+    .search-box {
+        margin-top: 10px;
+    }
+}
+
+.full-menu-section {
+    padding: 80px 5%;
+    background-color: black; /* Fundo escuro para contrastar o amarelo da seção anterior */
+    text-align: center;
+}
+
+.full-menu-title {
+    color: #F3EF05; /* Título principal amarelo */
+    margin-bottom: 50px;
+}
+
+.menu-category-title {
+    font-size: 2em;
+    color: #F31505; /* Título de categoria em vermelho fogo */
+    margin: 40px 0 30px;
+    border-bottom: 3px solid #F3EF05;
+    display: inline-block;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Grid para Pizzas */
+.menu-grid-full {
+    display: grid;
+    /* Grid responsivo: 4 colunas no desktop, que se ajustam para no mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Grid para Bebidas */
+.bebidas-grid-full {
+    display: grid;
+    /* Bebidas podem ser menores: 6 colunas no desktop, que se ajustam para no mínimo 180px */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.menu-item-full {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+}
+    .menu-item-full {
+    /* ... seus estilos existentes ... */
+    /* Adicione isto para garantir que o item seja um bloco no grid */
+    display: block; 
+}
+/* E no final do seu CSS, adicione: */
+.menu-item-full[style*="display: flex"] {
+    display: block !important;
+}
+
+
+.menu-item-full:hover {
+    transform: translateY(-5px);
+    border-color: #F31505; /* Borda vermelha no hover */
+    box-shadow: 0 10px 20px rgba(243, 21, 5, 0.5);
+}
+
+.item-img {
+    width: 100%;
+    max-height: 180px; /* Limita a altura das imagens de pizza */
+    object-fit: contain;
+    margin-bottom: 10px;
+    /* Animação de flutuar deve ser removida aqui para não sobrecarregar */
+    animation: none !important;
+}
+
+.bebida-item .item-img {
+    max-height: 150px; /* Limita mais a altura para bebidas */
+}
+
+
+.item-name {
+    font-family: 'Bungee', sans-serif;
+    color: #F3EF05;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.item-price {
+    display: block;
+    font-family: 'Bungee', sans-serif;
+    color: #F31505;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.full-menu-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #38761d; /* Verde de 'COMPRAR' (Chama mais atenção) */
+    color: #fff;
+    font-family: 'Bungee', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.full-menu-btn:hover {
+    background-color: #4CAF50; /* Verde mais claro no hover */
+}
+
+.cta-escolher {
+    background-color: #F3EF05;
+    color: #000;
+}
+
+.cta-escolher:hover {
+    background-color: #D4A800;
+}
+
+
+/* === RESPONSIVIDADE DO CARDÁPIO COMPLETO === */
+
+@media (max-width: 992px) {
+    .menu-grid-full {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .bebidas-grid-full {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-grid-full {
+        grid-template-columns: 1fr; /* Coluna única no mobile */
+    }
+    .bebidas-grid-full {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .item-img {
+        max-height: 250px;
+    }
+}

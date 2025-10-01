@@ -1,0 +1,259 @@
+/* Paleta: #000 (Preto), #F31505 (Vermelho Fogo), #F3EF05 (Amarelo Mostarda) */
+
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+/* Tipografia Bungee para Títulos e Destaques */
+h1, h2, .cta-button, .main-nav a, .social-link a {
+    font-family: 'Bungee', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* === HEADER E NAVEGAÇÃO === */
+
+.main-header {
+    background-color: #F3EF05; /* Fundo Amarelo para a barra */
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-image {
+    width: 130px; /* Tamanho ajustado para a logo */
+}
+
+/* Navegação */
+.main-nav a {
+    color: #000;
+    margin: 0 15px;
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+.main-nav a:hover {
+    color: #F31505; /* Hover Vermelho Fogo */
+}
+
+/* Busca */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="search"] {
+    width: 180px;
+    padding: 8px 30px 8px 10px;
+    border: 2px solid #F31505; /* Borda Vermelha */
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(243, 21, 5, 0.3);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    color: #F31505;
+    pointer-events: none; /* Garante que o clique passe para o input */
+}
+
+/* === HERO SECTION === */
+
+.hero-section {
+    min-height: calc(100vh - 80px); /* Ajusta para preencher a tela menos o header */
+    display: flex;
+    align-items: center;
+    padding: 50px 5%;
+    gap: 40px; /* Espaçamento entre conteúdo e imagem */
+}
+
+/* Conteúdo (Textos) */
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 5em;
+    color: #F31505; /* Vermelho Fogo */
+    line-height: 0.9;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    color: #F3EF05; /* Amarelo Mostarda */
+    margin-bottom: 30px;
+}
+
+.hero-content p {
+    color: #DDD;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+/* Botão CTA */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #F3EF05; /* Amarelo Mostarda */
+    color: #000;
+    font-size: 1.1em;
+    border-radius: 5px;
+    box-shadow: 0 6px 15px rgba(243, 21, 5, 0.5); /* Sombra vermelha */
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #F31505;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Imagem da Pizza */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizza-image-animated {
+    max-width: 100%;
+    height: auto;
+    animation: flutuar 3s ease-in-out infinite; /* Animação flutuar */
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-1deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* === FOOTER === */
+
+.main-footer {
+    background-color: #111;
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 5px solid #F31505;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-link a {
+    color: #F31505;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.social-link i {
+    color: #F3EF05;
+    font-size: 1.5em;
+}
+
+.social-link a:hover {
+    color: #F3EF05;
+}
+
+/* === RESPONSIVIDADE (Mobile) === */
+
+@media (max-width: 992px) {
+    /* Header */
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav {
+        order: 3; /* Coloca a navegação abaixo no mobile */
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        margin: 0 10px;
+    }
+
+    .search-box {
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        min-height: auto;
+    }
+
+    .hero-content {
+        order: 2;
+        max-width: 100%;
+    }
+
+    .hero-image-container {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3em;
+    }
+
+    /* Footer */
+    .main-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}

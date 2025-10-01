@@ -2,205 +2,211 @@
 /* VARIÁVEIS DE COR E RESET BÁSICO */
 /* ============================================== */
 :root {
-  --bg-dark: #000000;
-  --card-dark: #1a1a1a;
-  --text-light: #f0f0f0;
-  --accent-orange: #ff8c00;
-  --accent-silver: #f8f7f7;
-  --divider-color: #333333;
+--bg-dark: #000000;
+--card-dark: #1a1a1a;
+--text-light: #f0f0f0;
+--accent-orange: #ff8c00;
+--accent-silver: #f8f7f7;
+--divider-color: #333333;
 }
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /* ============================================== */
-/* LAYOUT E CENTRALIZAÇÃO */
-/* ============================================== */
 body {
-  font-family: "Poppins", sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-light);
-  margin: 0;
-  padding: 0;
-  text-align: center;
+font-family: "Poppins", sans-serif;
+background: var(--bg-dark);
+color: var(--text-light);
+ margin: 0;
+padding: 0;
+ text-align: center;
 background-image: url(https://i.pinimg.com/originals/6d/c1/17/6dc11726798611a9e2fa758a02188bf9.gif);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+min-height: 100vh;
 }
 
 header {
-  padding: 60px 20px 40px;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center; /* Garante que todos os elementos internos estejam centralizados */
+ padding: 60px 20px 40px;
+ width: 100%;
+ max-width: 1200px;
+text-align: center;
 }
 
 /* ESTILO E TAMANHO DA LOGO */
 .logo {
-position: relative;
- left: 280px;
-  width: 190px; /* Logo maior e centralizada */
-  height: auto;
-  margin-bottom: 15px;
+ position: relative;
+left: 490px;
+width: 190px;
+height: auto;
+margin-bottom: 15px;
 }
 
 /* === ESTILO H1: O DEGRADÊ AZUL-LARANJA === */
 h1 {
-     position: relative;
-    right: 50px;
-  font-size: 2.5rem;
-  margin: 0;
+position: relative;
+right: 0px;
+font-size: 2.5rem;
+margin: 0;
 
-  background-image: linear-gradient(
-    to right,
-    #0085ca,
-    /* Azul vibrante */ #fd8112 /* Laranja energético */
-  );
+background-image: linear-gradient(
+ to right,
+ #0085ca,
+ #fd8112
+ );
 
-  -webkit-background-clip: text;
-  background-clip: text;
+ -webkit-background-clip: text;
+ background-clip: text;
 
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+ -webkit-text-fill-color: transparent;
+ text-fill-color: transparent;
 
-  display: inline-block;
+ display: inline-block;
 }
 /* ======================================== */
 
 /* SUBTÍTULO COM MAIS DESTAQUE */
 .subtitle {
-  color: var(--accent-orange);
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 10px;
-  text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+ color: var(--accent-orange);
+ font-size: 1rem;
+ font-weight: 500;
+ margin-top: 10px;
+ text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
 }
 
 /* --- Contêiner Principal --- */
 .container {
-  margin: 0 auto;
-  padding: 30px 20px 80px;
-  max-width: 1200px;
-  width: 100%;
+margin: 0 auto;
+padding: 30px 20px 80px;
+max-width: 1200px;
+width: 100%;
 }
 
 /* TÍTULO DE SEÇÃO MAIS PROFISSIONAL */
 .section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-light); /* Texto branco para máximo contraste */
-  text-align: center;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--accent-orange); /* Linha divisória laranja */
-  width: 100%;
-}
-
-.grid-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
+font-size: 1.8rem;
+font-weight: 700;
+color: var(--text-light);
+text-align: center;
+margin-bottom: 40px;
+padding-bottom: 10px;
+border-bottom: 2px solid var(--accent-orange);
+ width: 100%;
 }
 
 /* ============================================== */
-/* ANIMAÇÃO DA BORDA (CHAVE) */
+/* CORREÇÃO CHAVE DE LAYOUT: GRID E ESPAÇAMENTO */
+/* ============================================== */
+.grid-layout {
+ display: grid; /* Importante: usa o poder do Grid para layout de colunas */
+ /* Garante que os cartões se ajustem, com um mínimo de 450px e máximo de 1fr */
+ grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+ gap: 60px; /* Aumenta o espaço entre os cartões, resolvendo a sobreposição visual */
+width: 100%;
+ align-items: stretch;
+}
+
+
+/* ============================================== */
+/* ANIMAÇÃO DA BORDA */
 /* ============================================== */
 @keyframes animate-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+ 0% {
+ background-position: 0% 50%;
+ }
+ 50% {
+background-position: 100% 50%;
+}
+100% {
+ background-position: 0% 50%;
+}
 }
 
 /* ============================================== */
 /* ESTILO DO CARD (PREVIEW DA LP) */
 /* ============================================== */
 
-/* Container que envolve a LP e o Carrossel (Se existir) */
+/* Container que envolve a LP e o Carrossel */
 .landing-page-card {
-    width: 100%;
-    /* margin-bottom: 40px; <-- REMOVIDO */
-    max-width: 900px; 
+ width: 100%;
+ margin-bottom: 20px; 
+ max-width: none; 
+ /* Previne anomalias de sobreposição: */
+position: relative; 
+z-index: 1; 
 }
 
 /* Link/Card da Landing Page */
 .preview {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: var(--text-light);
-  background: var(--card-dark);
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
+display: flex;
+flex-direction: column;
+text-decoration: none;
+color: var(--text-light);
+background: var(--card-dark);
+ border-radius: 16px;
+overflow: hidden;
+cursor: pointer;
 
-  /* BORDA MAIS GROSSA E ANIMADA */
-  border: 5px solid transparent; /* Aumentado para 5px */
+/* BORDA MAIS GROSSA E ANIMADA */
+border: 5px solid transparent;
 
-  background-image: linear-gradient(var(--card-dark), var(--card-dark)),
-    /* Degradê Laranja e Azul */
-      linear-gradient(
-        45deg,
-        var(--accent-orange) 0%,
-        #0085ca 50%,
-        var(--accent-orange) 100%
-      );
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  position: relative;
-  width: 100%;
+background-image: linear-gradient(var(--card-dark), var(--card-dark)),
+linear-gradient(
+45deg,
+var(--accent-orange) 0%,
+#0085ca 50%,
+var(--accent-orange) 100%
+);
+background-origin: border-box;
+ background-clip: padding-box, border-box;
+ position: relative;
+width: 100%;
 
-  background-size: 200% 200%;
-  animation: animate-border 4s ease-in-out infinite; /* Animação mais rápida (4s) */
+background-size: 200% 200%;
+animation: animate-border 4s ease-in-out infinite;
 
-  /* NOVO: Transição para o efeito de flutuação */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* NOVO: Transição para o efeito de flutuação */
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* EFEITO FLUTUANTE PROFISSIONAL NO HOVER */
 .preview:hover {
-  transform: translateY(-8px); /* Flutua um pouco para cima */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra intensa */
-  z-index: 10;
+transform: translateY(-8px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+z-index: 10;
 }
 
 /* Iframe (Miniatura da LP) - Altura fixa */
 .preview iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  display: block;
-  transition: none;
-  transform-origin: top;
+width: 100%;
+ height: 600px;
+border: none;
+display: block;
+transition: none;
+transform-origin: top;
+position: static !important; /* Garante que o iframe não se projete */
 }
 
 .preview:hover iframe {
-  height: 600px;
+height: 600px;
 }
 
 .preview-info {
-  padding: 20px;
-  text-align: left;
+padding: 20px;
+text-align: left;
 }
 .preview-info h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.3rem;
-  color: var(--accent-orange);
+margin: 0 0 5px 0;
+font-size: 1.3rem;
+color: var(--accent-orange);
 }
 .preview-info p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--accent-silver);
+margin: 0;
+font-size: 0.95rem;
+color: var(--accent-silver);
 }
 
 /* ============================================== */
@@ -208,94 +214,153 @@ h1 {
 /* ============================================== */
 
 .template-carousel-wrapper {
-  padding: 20px 0;
-  margin-top: 30px;
-  background: #111;
-  border-radius: 12px;
+ padding: 20px 0;
+margin-top: 30px;
+background: #111;
+border-radius: 12px;
+margin-bottom: 30px;
+position: relative; 
+z-index: 2; /* Garante que o conteúdo interno esteja sobre o fundo do cartão */
 }
 
 .template-carousel-wrapper h3 {
-  text-align: left;
-  color: var(--accent-silver);
-  font-size: 1.1rem;
-  padding-left: 20px;
-  margin-top: 0;
-  margin-bottom: 15px;
+text-align: left;
+color: var(--accent-silver);
+font-size: 1.1rem;
+padding-left: 20px;
+margin-top: 0;
+margin-bottom: 15px;
 }
 
 .template-carousel {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  gap: 20px;
-  padding: 0 20px 20px 20px;
+display: flex;
+overflow-x: auto;
+flex-wrap: nowrap;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+gap: 20px;
+padding: 0 20px 20px 20px;
 }
 
 .template-carousel::-webkit-scrollbar {
-  height: 8px;
+height: 8px;
 }
 .template-carousel::-webkit-scrollbar-thumb {
-  background: var(--accent-orange);
-  border-radius: 10px;
+background: var(--accent-orange);
+border-radius: 10px;
 }
 .template-carousel::-webkit-scrollbar-track {
-  background: var(--card-dark);
+background: var(--card-dark);
 }
 
 .carousel-item {
-  flex: 0 0 300px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  background: var(--card-dark);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: none;
-  cursor: default;
-  box-shadow:  0px 0px 9px rgba(252, 145, 5, 0.4);
+flex: 0 0 300px;
+height: auto;
+display: flex;
+flex-direction: column;
+background: var(--card-dark);
+border-radius: 10px;
+overflow: hidden;
+transition: none;
+cursor: default;
+box-shadow: 0px 0px 9px rgb(241, 139, 6);
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 300px; 
-    /* MUDANÇA AQUI: de 'cover' para 'contain' */
-    object-fit: contain; 
-    /* NOVO: Define um fundo para o espaço vazio */
-    background-color: #333; 
-    border: none;
-    display: block;
+width: 100%;
+height: 300px;
+object-fit: contain;
+background-color: #333;
+border: none;
+display: block;
 }
-/* ... (código p
 
 
 /* ============================================== */
 /* RESPONSIVIDADE (MOBILE) */
 /* ============================================== */
 @media (max-width: 768px) {
- .logo{
-     position: relative;
-    left: 0px;
+.logo{
+position: relative;
+left: 70px;
+}
+
+header {
+padding-top: 40px;
+}
+h1 {
+position: relative;
+right: 0px;
+font-size: 2rem;
+}
+.section-title {
+font-size: 1.5rem;
+}
+
+
+.grid-layout {
+grid-template-columns: 1fr; /* Força uma coluna única no mobile */
+gap: 40px;
  }
 
-  header {
-    padding-top: 40px;
-  }
-  h1 {
-    position: relative;
-    right: 0px;
-    font-size: 2rem;
-  }
-  .section-title {
-    font-size: 1.5rem;
-  }
+.preview iframe {
+ height: 600px; 
+ }
 
-  .preview iframe {
-    height: 800px;
-  }
-
-  .carousel-item {
-    flex: 0 0 66%;
-  }
+.carousel-item {
+flex: 0 0 66%;
 }
+}
+
+footer {
+            width: 100%;
+            padding: 20px;
+            background-color: var(--card-dark);
+            color: var(--text-light);
+            border-top: 2px solid var(--divider-color);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Estilo para o componente WhatsApp */
+#whatsapp-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 50; /* Garante que fique acima de outros elementos */
+        }
+
+        /* Estilos base para o menu de opções (escondido por padrão) */
+        #whatsapp-options {
+            /* Posição acima do botão */
+            position: absolute;
+            bottom: 70px; /* Acima do botão, que tem ~56px */
+            right: 0;
+            width: 250px;
+            
+            /* Efeito de transição suave */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Esconde o menu inicialmente */
+            opacity: 0;
+            transform: translateY(10px) scale(0.95);
+            pointer-events: none; /* Não interage com o mouse quando invisível */
+        }
+
+        /* Estado ATIVO do menu (quando a classe 'active' é adicionada pelo JS) */
+        #whatsapp-options.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto; /* Permite interação com o mouse */
+        }
+
+        /* Estilo para o botão principal quando ATIVO */
+        #whatsapp-button.active {
+            transform: rotate(45deg); /* Gira o ícone para parecer um 'X' de fechar */
+        }
+        
+        /* Transição para o botão ativo */
+        #whatsapp-button {
+            transition: transform 0.3s ease-in-out;
+        }

@@ -1,0 +1,34 @@
+
+body{
+background-color: black;
+
+
+}
+
+img{
+position: absolute;
+top: 00px;
+right: 560px;
+width: 200px;
+}
+
+img+img{
+position: absolute;
+top: 12px;
+right: 1270px;
+width: 200px;
+}
+
+
+img{
+animation: flutuar 3s ease-in-out infinite;
+
+
+}
+
+@keyframes flutuar {
+0% { tranform: traslateY(0);}
+50%  { transform: translateY(-10px);}
+100% { transform: translateY(0);}
+
+}

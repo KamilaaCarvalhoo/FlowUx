@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sua Empresa - Suplementos</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<header>
+  <h1><i class="fas fa-bolt header-icon"></i> Sua Logo</h1>
+  <nav>
+    <a href="#produtos"><i class="fas fa-boxes"></i> Produtos</a>
+    <a href="#contadores"><i class="fas fa-chart-line"></i> Resultados</a>
+    <a href="#depoimentos"><i class="fas fa-comments"></i> Depoimentos</a>
+    <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero-section">
+    <div class="hero-content" id="hero-content">
+        <h2>Desperte Seu Máximo Potencial</h2>
+        <p>Suplementos premium desenvolvidos para atletas que não aceitam menos do que o melhor. Energia, força e foco em cada dose.</p>
+        <button class="cta-hero" onclick="document.querySelector('#produtos').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-arrow-down"></i> Ver Produtos
+        </button>
+    </div>
+</section>
+
+<section class="produtos" id="produtos">
+  <h3>🔥 Nossos Suplementos Focados em Performance</h3>
+  <div class="grid">
+        <div class="card" onclick="abrirModal('Whey Protein','Ganhe massa magra e recupere seus músculos mais rápido com nossa fórmula isolada. Ideal para pós-treino.','https://via.placeholder.com/300x250/1a1a1a/00bcd4?text=WHEY+ISOLADO')">
+      <img src="./img/proteinas-e-ginasticapng.png" alt="Whey Protein">
+      <h4>Whey Protein <i class="fas fa-trophy"></i></h4>
+      <p>Proteína isolada de rápida absorção para hipertrofia e recuperação.</p>
+      <button class="btn-card">Comprar <i class="fas fa-shopping-cart"></i></button>
+    </div>
+    <div class="card" onclick="abrirModal('Creatina Monohidratada','Explosão de força para treinos intensos e aumento de volume muscular. Pureza garantida.','https://via.placeholder.com/300x250/1a1a1a/00bcd4?text=CREATINA+MONO')">
+      <img src="./img/proteinas-e-ginasticapng.png" alt="Creatina">
+      <h4>Creatina <i class="fas fa-dumbbell"></i></h4>
+      <p>Aumente sua potência, resistência e volume celular.</p>
+      <button class="btn-card">Comprar <i class="fas fa-shopping-cart"></i></button>
+    </div>
+    <div class="card" onclick="abrirModal('Pré-Treino Carga Máxima','Energia, foco e pump para você ir além dos seus limites. Sem crash!','https://via.placeholder.com/300x250/1a1a1a/00bcd4?text=PRE-TREINO+MAX')">
+      <img src="./img/proteinas-e-ginasticapng.png" alt="Pré-Treino">
+      <h4>Pré-Treino <i class="fas fa-bolt"></i></h4>
+      <p>Foco mental e energia explosiva para as séries mais pesadas.</p>
+      <button class="btn-card">Comprar <i class="fas fa-shopping-cart"></i></button>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <img id="modalImg" src="" alt="" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+    <h4 id="modalTitle"></h4>
+    <p id="modalDesc"></p>
+    <button class="btn-card modal-cta">Comprar Agora <i class="fas fa-credit-card"></i></button>
+  </div>
+</div>
+
+<section class="contadores" id="contadores">
+  <div class="contador-box">
+    <div class="contador" data-target="10000">0</div>
+    <div class="label"><i class="fas fa-user-check"></i> Atletas Satisfeitos</div>
+  </div>
+  <div class="contador-box">
+    <div class="contador" data-target="50000">0</div>
+    <div class="label"><i class="fas fa-box"></i> Produtos Entregues</div>
+  </div>
+  <div class="contador-box">
+    <div class="contador" data-target="99">0</div>
+    <div class="label"><i class="fas fa-star"></i> Satisfação (%)</div>
+  </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+  <h3>O que a Comunidade Diz</h3>
+  <div class="slider">
+    <div class="slide active">
+      <p>"O Whey Protein da (Empresa) mudou meus treinos, resultados incríveis! Mistura fácil e o sabor é o melhor que já provei."</p>
+      <h5>- João M. | Bodybuilder</h5>
+    </div>
+    <div class="slide">
+      <p>"Energia absurda com o Pré-Treino, consegui treinar mais pesado e focado. A dose certa de cafeína, sem tremedeira!"</p>
+      <h5>- Ana S. | Crossfiteira</h5>
+    </div>
+    <div class="slide">
+      <p>"A Creatina aumentou minha força e resistência em 20%. Pureza e qualidade de alto nível. Não treino sem!"</p>
+      <h5>- Carlos T. | Levantamento de Peso</h5>
+    </div>
+  </div>
+  <div class="slider-controls">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</section>
+
+<section class="contato" id="contato">
+    <div class="section-separator"></div>
+
+    <h3>Fale Conosco e Leve Sua Performance a Sério</h3>
+    <form class="contact-form">
+        <input type="text" placeholder="Seu Nome Completo" required>
+        <input type="email" placeholder="Seu Melhor E-mail" required>
+        <textarea placeholder="Sua Mensagem ou Dúvida sobre Suplementação..." rows="4" required></textarea>
+        <button type="submit" class="btn-card">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+    </form>
+</section>
+
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20atendimento%20VIP%20sobre%20os%20suplementos%20PowerSupps." 
+   target="_blank" 
+   class="cta-whatsapp-integrated">
+    Fale Agora no WhatsApp <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<footer>
+  <p>© 2025 Nome da Sua Empresa . Todos os direitos reservados. | CNPJ: XX.XXX.XXX/0001-XX</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
