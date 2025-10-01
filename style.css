@@ -282,7 +282,7 @@ display: block;
 @media (max-width: 768px) {
 .logo{
 position: relative;
-left: 70px;
+left: 120px;
 }
 
 header {
