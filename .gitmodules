@@ -1,0 +1,3 @@
+[submodule "site1/AuroraGlasses"]
+	path = site1/AuroraGlasses
+	url = https://github.com/KamilaaCarvalhoo/AuroraGlasses.git
